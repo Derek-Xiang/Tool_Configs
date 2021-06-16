@@ -1,0 +1,265 @@
+{
+  "window.zoomLevel": 0,
+  // "python.linting.pylintEnabled": true,
+  // "python.linting.enabled": true,
+  "python.linting.pylintArgs": [
+      "--rcfile",
+      "C:\\Users\\Dejun.PAGROUP\\Desktop\\Dejun\\Tools\\pylintrc"
+  ],
+  "explorer.confirmDelete": false,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "remote.SSH.remotePlatform": {
+      "pag-derek.pagroup.cloud": "linux"
+  },
+  // Git
+  "git.enabled": true,
+  "git.path": "C:\\Users\\Dejun.PAGROUP\\Downloads\\cmder\\vendor\\git-for-windows\\cmd\\git.exe",
+  "files.trimTrailingWhitespace": true,
+  // Vim Configuration:
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.insertModeKeyBindings": [
+      {
+          "before": [
+              "j",
+              "k"
+          ],
+          "after": [
+              "<Esc>"
+          ]
+      },
+  ],
+  "vim.normalModeKeyBindings": [
+      {
+          "before": [
+              "<C-h>"
+          ],
+          "after": [
+              "<C-w>",
+              "h"
+          ]
+      },
+      {
+          "before": [
+              "<C-l>"
+          ],
+          "after": [
+              "<C-w>",
+              "l"
+          ]
+      },
+      {
+          "before": [
+              "<C-j>"
+          ],
+          "after": [
+              "<C-w>",
+              "j"
+          ]
+      },
+      {
+          "before": [
+              "<C-k>"
+          ],
+          "after": [
+              "<C-w>",
+              "k"
+          ]
+      },
+      {
+          "before": [
+              "<leader>",
+              "s"
+          ],
+          "after": [
+              "<leader>",
+              "<leader>",
+              "s"
+          ]
+      },
+      {
+          "before": [
+              "<leader>",
+              "w"
+          ],
+          "after": [
+              "<leader>",
+              "<leader>",
+              "w"
+          ]
+      },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+          "before": [
+              "<leader>",
+              "g",
+              "r"
+          ],
+          "commands": [
+              "editor.action.referenceSearch.trigger"
+          ]
+      },
+      {
+          "before": [
+              "<C-n>"
+          ],
+          "commands": [
+              ":nohl"
+          ]
+      },
+      {
+          "before": [
+              "<tab>"
+          ],
+          "commands": [
+              "workbench.action.nextEditor"
+          ]
+      },
+      {
+          "before": [
+              "<S-tab>"
+          ],
+          "commands": [
+              "workbench.action.previousEditor"
+          ]
+      },
+      {
+          "before": [
+              "<leader>",
+              "w"
+          ],
+          "commands": [
+              "workbench.action.splitEditor"
+          ]
+      },
+      {
+          "before": [
+              "<leader>",
+              "e"
+          ],
+          "commands": [
+              "workbench.action.toggleSidebarVisibility"
+          ]
+      },
+      {
+          "before": [
+              "<leader>",
+              "f"
+          ],
+          "commands": [
+              "revealInExplorer"
+          ]
+      },
+      {
+          "before": [
+              "<leader>",
+              "d"
+          ],
+          "after": [
+              "d",
+              "d"
+          ]
+      },
+      {
+          "before": [
+              "<C-n>"
+          ],
+          "commands": [
+              ":nohl"
+          ]
+      },
+      {
+          "before": [
+              "J"
+          ],
+          "after": [
+              "5",
+              "j"
+          ]
+      },
+      {
+          "before": [
+              "K"
+          ],
+          "after": [
+              "5",
+              "k"
+          ]
+      },
+      {
+          "before": [
+              "L"
+          ],
+          "after": [
+              "$"
+          ]
+      },
+      {
+          "before": [
+              "H"
+          ],
+          "after": [
+              "^"
+          ]
+      }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+      {
+          "before": [
+              ">"
+          ],
+          "commands": [
+              "editor.action.indentLines"
+          ]
+      },
+      {
+          "before": [
+              "<"
+          ],
+          "commands": [
+              "editor.action.outdentLines"
+          ]
+      },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false,
+      "<C-c>": false,
+      "<C-v>": false
+  },
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": [
+      "#8FBCBB",
+      "#434C5E"
+  ],
+  "vim.statusBarColors.insert": "#F2D9AD",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  // Settings changes with vim status bar settings
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#434C5E"
+  },
+  "workbench.editorAssociations": [
+      {
+          "viewType": "jupyter.notebook.ipynb",
+          "filenamePattern": "*.ipynb"
+      }
+  ],
+}
