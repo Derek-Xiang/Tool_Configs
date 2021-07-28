@@ -30,6 +30,8 @@ set timeoutlen=500                   " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus            " Copy paste between vim and everything else
 au BufEnter * set fo-=c fo-=r fo-=ok " Stop continue comment header in newline
 
+let g:python3_host_prog = '/usr/bin/python3.9'
+
 
 " ------------------- Key Remapping ---------------------- "
 let g:mapleader = ' '
@@ -62,16 +64,19 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
 " ------------------ Plugins (Vim Plug) ----------------- "
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-markdown'                       " Markdown
-Plug 'vim-airline/vim-airline'                  " Status Line
-Plug 'vim-airline/vim-airline-themes'           " Status Line - Themes
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto Complete
-Plug 'junegunn/vim-easy-align'                  " Alignment
-Plug 'honza/vim-snippets'                       " Snippets
+Plug 'tpope/vim-markdown'                           " Markdown
+Plug 'vim-airline/vim-airline'                      " Status Line
+Plug 'vim-airline/vim-airline-themes'               " Status Line - Themes
+Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Auto Complete
+Plug 'junegunn/vim-easy-align'                      " Alignment
+Plug 'honza/vim-snippets'                           " Snippets
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fzf
+Plug 'junegunn/fzf.vim'                             " Fzf
+Plug 'airblade/vim-rooter'                          " Search from project dir
+
 
 call plug#end()
 
@@ -79,3 +84,5 @@ call plug#end()
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/coc_config.vim
 source $HOME/.config/nvim/plug-config/easy_align.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
+
