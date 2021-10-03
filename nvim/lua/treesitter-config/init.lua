@@ -4,6 +4,9 @@ require'nvim-treesitter.configs'.setup {
     enable = true,              -- false will disable the whole extension
     disable = { "c", "rust" },  -- list of language that will be disabled
   },
+  autotag = {
+    enable = true,
+  }
 }
 
 vim.g.nvcode_termcolors = 256

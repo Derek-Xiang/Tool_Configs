@@ -19,10 +19,20 @@ return require('packer').startup(function()
   -- using packer.nvim
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   -- which key
-  use {'folke/which-key.nvim' }
-  -- LSP
-  use {'neovim/nvim-lspconfig'}
-  use {'hrsh7th/nvim-compe'}
-end)
+  use 'folke/which-key.nvim'
 
+  -- Pair & close tag
+  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-autopairs'
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'kabouzeid/nvim-lspinstall'
+  use 'hrsh7th/nvim-compe'
+end)
 
