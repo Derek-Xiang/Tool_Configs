@@ -55,13 +55,23 @@ mason_lspconfig.setup({
   automatic_installation = false,
 })
 
-
 mason_lspconfig.setup_handlers {
 
   function (server_name) -- default handler (optional)
     require("lspconfig")[server_name].setup {
       on_attach = keymaps.on_attach,
       capabilities = keymaps.capabilities
+    }
+  end,
+  ["sumneko_lua"] = function ()
+    require("lspconfig").sumneko_lua.setup {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" }
+          }
+        }
+      }
     }
   end,
 }
