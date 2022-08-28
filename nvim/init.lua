@@ -11,6 +11,7 @@ require "user.comment"
 require "user.surround"
 require "user.gitsigns"
 require "user.toggleterm"
+require "user.tmux"
 
 -- Colorscheme
 require "user.colorscheme"
@@ -19,10 +20,10 @@ require "user.colorscheme"
 require "user.cmp"
 
 -- LSP
-require("user.lsp-mason")
+require "user.lsp-mason"
 
 -- Telescope
 require "user.telescope"
 
 -- Treesitter
-require("user.treesitter")
+require "user.treesitter"

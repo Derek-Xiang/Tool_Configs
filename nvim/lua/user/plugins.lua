@@ -50,6 +50,7 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim", commit = "f5791fdd561c564491563cd4139727c38d135dbf" }
   use { "numToStr/Comment.nvim", commit = "0932d0cdcee31d12664f20f728cde8915614a623" }
   use { "akinsho/toggleterm.nvim", commit = "6673a8f2fd2a9c0ed09b9951298093d14ba0445a" }
+  use { "aserowy/tmux.nvim" }
 
   -- Colorschemes
   use({ "lunarvim/darkplus.nvim", commit = "f69b646c7762c6e2334f7cff9d5ab231756e4b0d" })
