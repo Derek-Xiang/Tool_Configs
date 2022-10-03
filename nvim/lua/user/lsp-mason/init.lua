@@ -37,6 +37,8 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
+  "terraform-ls",
+  "tflint"
 }
 
 
@@ -56,7 +58,6 @@ mason_lspconfig.setup({
 })
 
 mason_lspconfig.setup_handlers {
-
   function (server_name) -- default handler (optional)
     require("lspconfig")[server_name].setup {
       on_attach = keymaps.on_attach,
@@ -65,10 +66,16 @@ mason_lspconfig.setup_handlers {
   end,
   ["sumneko_lua"] = function ()
     require("lspconfig").sumneko_lua.setup {
+      on_attach = keymaps.on_attach,
       settings = {
         Lua = {
           diagnostics = {
+            -- Get the language server to recognize the 'vim' global varible
             globals = { "vim" }
+          },
+          workspace =  {
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true)
           }
         }
       }

@@ -25,14 +25,12 @@ local options = {
   termguicolors = true, -- Display lines as one long line
   scrolloff = 8,
   mouse = "a",
-  showtabline = 2,
   tabstop = 2,
   shiftwidth = 2,
   numberwidth = 4, -- Set number column width to 4 (default 4)
   pumheight = 10, -- Pop up height
   timeoutlen = 100, -- whichkey show up in ms
   guifont = "monospace:h17",
-  termguicolors = true -- Set term gui colors (most terminals supports this)
 }
 
 for k, v in pairs(options) do

@@ -7,6 +7,14 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Select All
+keymap('n', '<C-a>', 'gg<S-v>G', opts)
+
+-- New Tab
+keymap('n', 'te', ':tabedit<CR>', opts)
+keymap('n', 'sp', ':split<CR><C-w>l', opts)
+keymap('n', 'sv', ':vsplit<CR><C-w>l', opts)
+
 -- Better escape
 keymap('i', 'jk', '<ESC>', opts)
 keymap('n', '<ESC>', '<ESC>:noh<CR>', opts)
@@ -21,10 +29,15 @@ keymap('n', '<C-h>', '<C-w>h', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+--keymap("n", "<A-k>", ":resize +2<CR>", opts)
+keymap("n", "<A-k>", "<C-w>-", opts)
+keymap("n", "<A-j>", ":resize -2<CR>", opts)
+keymap("n", "<A-h>", ":vertical resize +2<CR>", opts)
+keymap("n", "<A-l>", ":vertical resize -2<CR>", opts)
+-- keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+-- keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+-- keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+-- keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 
 -- Better indenting
 keymap('v', '<', '<gv', opts)
@@ -64,10 +77,23 @@ keymap('n', '<leader>g', ':Telescope live_grep<CR>', opts)
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current(nil, {cfg})<CR>", opts)
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 
 -- MarkdownPreview
 keymap('n', '<leader>mp', ':MarkdownPreview<CR>', opts)
 keymap('n', '<leader>ms', ':MarkdownPreviewStop<CR>', opts)
 keymap('n', '<leader>mt', ':MarkdownPreviewToggle<CR>', opts)
+
+-- Terraform settings
+vim.cmd([[silent! autocmd! filetypedetect BufRead,BufNewFile *.tf]])
+vim.cmd([[autocmd BufRead,BufNewFile *.hcl set filetype=hcl]])
+vim.cmd([[autocmd BufRead,BufNewFile .terraformrc,terraform.rc set filetype=hcl]])
+vim.cmd([[autocmd BufRead,BufNewFile *.tf,*.tfvars set filetype=terraform]])
+vim.cmd([[autocmd BufRead,BufNewFile *.tfstate,*.tfstate.backup set filetype=json]])
+vim.cmd([[let g:terraform_fmt_on_save=1]])
+vim.cmd([[let g:terraform_align=1]])
+keymap("n", "<leader>ti", ":!terraform init<CR>", opts)
+keymap("n", "<leader>tv", ":!terraform validate<CR>", opts)
+keymap("n", "<leader>tp", ":!terraform plan<CR>", opts)
+keymap("n", "<leader>taa", ":!terraform apply -auto-approve<CR>", opts)
