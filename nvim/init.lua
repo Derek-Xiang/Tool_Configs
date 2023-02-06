@@ -1,29 +1,20 @@
--- Standard Settings
-require "user.options"
-require "user.keymappings"
-require "user.plugins"
-require "user.nvim-tree"
-require "user.autopairs"
-require "user.indentline"
-require "user.lualine"
-require "user.bufferline"
-require "user.comment"
-require "user.surround"
-require "user.gitsigns"
-require "user.toggleterm"
-require "user.tmux"
+require "options"
+require "keymaps"
+require "plugins"
 
--- Colorscheme
-require "user.colorscheme"
+-- Plugin Configs
+require "p_lualine"
+require "p_nvim-tree"
+require "p_bufferline"
+require "p_comment"
+require "p_surround"
+require "p_autopairs"
+require "p_indentline"
+require "p_tmux"
+require "p_treesitter"
+require "p_telescope"
 
--- Cmp
-require "user.cmp"
+require "lsp"
+require "p_cmp"
 
--- LSP
-require "user.lsp-mason"
-
--- Telescope
-require "user.telescope"
-
--- Treesitter
-require "user.treesitter"
+vim.cmd("colorscheme darkplus")

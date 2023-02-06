@@ -11,9 +11,18 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+    use_system_clipboard = true,
+  },
   update_focused_file = {
     enable = true,
     update_cwd = true,
+  },
+  filters = {
+    custom = { "^.git$", "^node_modules$" },
   },
   renderer = {
     root_folder_modifier = ":t",

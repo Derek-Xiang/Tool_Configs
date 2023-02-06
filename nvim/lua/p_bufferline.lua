@@ -106,3 +106,4 @@ bufferline.setup {
     },
   },
 }
+

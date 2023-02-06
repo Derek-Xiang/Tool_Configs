@@ -43,6 +43,8 @@ telescope.setup {
         ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
         ["<C-l>"] = actions.complete_tag,
         ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+
+        ["<esc>"] = actions.close,
       },
 
       n = {
@@ -95,3 +97,7 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
+
+-- Enable telescope fzf native, if installed
+pcall(telescope.load_extension, 'fzf')
