@@ -15,6 +15,12 @@ require("lazy").setup({
   -- Required by multiple plugins
   { "nvim-lua/plenary.nvim", commit = "9a0d3bf7b832818c042aaf30f692b081ddd58bd9" },
 
+  -- Lsp
+  { "neovim/nvim-lspconfig", commit = "902d6aa31450d26e11bedcbef8af5b6fe2e1ffe8" },
+  { "williamboman/mason.nvim", commit = "24846a00941ec020c8addc7f52040a1b2fc12174" },
+  { "williamboman/mason-lspconfig.nvim", commit = "53f3a8bdcb77d4a95b082fd57e12173f353c6c3e" },
+  { "lukas-reineke/lsp-format.nvim", commit = "ca0df5c8544e51517209ea7b86ecc522c98d4f0a" }, -- Format on save
+
   -- Colorschemes
   { "lunarvim/darkplus.nvim", commit = "1826879d9cb14e5d93cd142d19f02b23840408a6" },
 
@@ -42,12 +48,6 @@ require("lazy").setup({
 
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", commit = "e00952111e94f95800a32eeedb057e7ad365960c" },
-
-  -- Lsp
-  { "neovim/nvim-lspconfig", commit = "902d6aa31450d26e11bedcbef8af5b6fe2e1ffe8" },
-  { "williamboman/mason.nvim", commit = "24846a00941ec020c8addc7f52040a1b2fc12174" },
-  { "williamboman/mason-lspconfig.nvim", commit = "53f3a8bdcb77d4a95b082fd57e12173f353c6c3e" },
-  { "lukas-reineke/lsp-format.nvim", commit = "ca0df5c8544e51517209ea7b86ecc522c98d4f0a" }, -- Format on save
 
   -- CMP
   { "hrsh7th/nvim-cmp", commit = "cfafe0a1ca8933f7b7968a287d39904156f2c57d" }, -- Main plugin for cmp, below are sources
