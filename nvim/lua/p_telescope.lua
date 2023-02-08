@@ -1,8 +1,10 @@
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
+  print("Telescope loaded failed !")
   return
 end
 
+telescope.setup()
 
 local actions = require "telescope.actions"
 
@@ -101,3 +103,15 @@ telescope.setup {
 
 -- Enable telescope fzf native, if installed
 pcall(telescope.load_extension, 'fzf')
+
+-- Load neoclip to telescope
+telescope.load_extension "neoclip"
+
+
+
+
+
+
+
+
+telescope.load_extension "neoclip"

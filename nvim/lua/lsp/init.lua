@@ -10,8 +10,6 @@ if not mason_lspconfig_status_ok then
   return
 end
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 mason.setup({ PATH = "prepend" })
 mason_lspconfig.setup({
   -- LSP servers: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
@@ -23,6 +21,7 @@ mason_lspconfig.setup({
     'bashls',
     'dockerls',
     'jsonls',
+    'marksman',
     'pyright',
     'solidity',
     'terraformls',
@@ -34,6 +33,7 @@ mason_lspconfig.setup({
 
 
 local lsp_settings = require("lsp.lsp_settings")
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 mason_lspconfig.setup_handlers {
   function(server_name) -- default handler (optional)
@@ -45,6 +45,7 @@ mason_lspconfig.setup_handlers {
   ["sumneko_lua"] = function()
     require("lspconfig").sumneko_lua.setup {
       on_attach = lsp_settings.on_attach,
+      capabilities = capabilities,
       settings = {
         Lua = {
           diagnostics = {

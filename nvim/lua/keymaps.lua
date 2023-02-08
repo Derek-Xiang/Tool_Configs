@@ -1,4 +1,3 @@
--- local keymap = vim.api.nvim_set_keymap
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
@@ -17,6 +16,8 @@ keymap('n', 'sv', ':vsplit<CR><C-w>l', opts)
 -- Better line start/end
 keymap('n', 'H', '^', opts)
 keymap('n', 'L', '$', opts)
+keymap('v', 'H', '^', opts)
+keymap('v', 'L', '$', opts)
 
 -- Better escape
 keymap('i', 'jk', '<ESC>', opts)
@@ -67,10 +68,5 @@ keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
-
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
---
+keymap('n', '<leader>fd', ':Telescope neoclip<CR>', opts)
+keymap('n', '<leader>fr', ':lua require("neoclip").clear_history()<CR>', opts)
