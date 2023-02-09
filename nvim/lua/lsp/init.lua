@@ -21,7 +21,7 @@ mason_lspconfig.setup({
     'bashls',
     'dockerls',
     'jsonls',
-    'marksman',
+    --'marksman',
     'pyright',
     'solidity',
     'terraformls',
