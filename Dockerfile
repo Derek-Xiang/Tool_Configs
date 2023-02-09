@@ -28,7 +28,7 @@ RUN git checkout tags/v0.8.3 \
   && make CMAKE_BUILD_TYPE=RelWithDebInfo \
   && make install
 
-RUN git clone --depth 1 https://github.com/Derek-Xiang/Tool_Configs.git /root/.config/
+RUN git clone --depth 1 -b nvim8.3-ubuntu22.04 https://github.com/Derek-Xiang/Tool_Configs.git /root/.config/
 
 RUN rm -rf /root/neovim
 

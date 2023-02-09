@@ -29,7 +29,7 @@ nvim
 ### 2.2 Install on Mac
 ```bash
 brew install neovim@0.8.3
-git clone --depth 1 https://github.com/Derek-Xiang/Tool_Configs.git ~/.config/
+git clone --depth 1 -b nvim8.3-ubuntu22.04 https://github.com/Derek-Xiang/Tool_Configs.git ~/.config/
 ```
 - If there is already something in ~/.config, then clone the repo and only copy nvim to ~/.config/
 
