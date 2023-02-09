@@ -61,4 +61,7 @@ require("lazy").setup({
 
   -- Snippet
   { "L3MON4D3/LuaSnip", commit = "d404ec306bfa4cdb0c3605dbb17e8a93a9597337" },
+
+  -- Git
+  { "lewis6991/gitsigns.nvim", commit = "ec4742a7eebf68bec663041d359b95637242b5c3" },
 })

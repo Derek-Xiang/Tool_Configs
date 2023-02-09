@@ -13,6 +13,9 @@ require "p_indentline"
 require "p_tmux"
 require "p_treesitter"
 
+-- Git related
+require "p_gitsigns"
+
 -- Telescope & its extensions
 require "p_telescope"
 require "p_neoclip"
