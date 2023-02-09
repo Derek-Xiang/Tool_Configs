@@ -50,7 +50,7 @@ keymap('n', '<Tab>', ':bnext<CR>', opts)
 keymap('n', '<S-Tab>', ':bprevious<CR>', opts)
 
 -- Move seleteced line / block of text in visual mode
-keymap('x', 'K', ':move \'<-2<CR>gv-gv\'', opts)
+keymap('x', 'K', ':move \'<-2<CR>gv=gv\'', opts)
 keymap('x', 'J', ':move \'>+1<CR>gvgv\'', opts)
 
 
