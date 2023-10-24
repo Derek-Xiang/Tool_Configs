@@ -14,7 +14,7 @@ mason.setup({ PATH = "prepend" })
 mason_lspconfig.setup({
   -- LSP servers: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
   ensure_installed = {
-    'sumneko_lua',
+    'lua_ls',
     'tsserver',
     'html',
     'cssls',
@@ -42,23 +42,31 @@ mason_lspconfig.setup_handlers {
       capabilities = capabilities,
     }
   end,
-  ["sumneko_lua"] = function()
-    require("lspconfig").sumneko_lua.setup {
+  ["lua_ls"] = function()
+    require("lspconfig").lua_ls.setup {
       on_attach = lsp_settings.on_attach,
       capabilities = capabilities,
       settings = {
         Lua = {
+          checkThirdParty = false, -- Disable popup selection question
+          runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT',
+          },
           diagnostics = {
-            -- Get the language server to recognize the 'vim' global varible
-            globals = { "vim" }
+            -- Get the language server to recognize the `vim` global
+            globals = { 'vim' },
           },
           workspace = {
             -- Make the server aware of Neovim runtime files
             library = vim.api.nvim_get_runtime_file("", true),
-            checkThirdParty = false,
-          }
-        }
-      }
+          },
+          -- Do not send telemetry data containing a randomized but unique identifier
+          telemetry = {
+            enable = false,
+          },
+        },
+      },
     }
   end,
 }

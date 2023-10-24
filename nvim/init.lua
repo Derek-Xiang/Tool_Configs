@@ -12,6 +12,7 @@ require "p_autopairs"
 require "p_indentline"
 require "p_tmux"
 require "p_treesitter"
+require "p_incolla"
 
 -- Git related
 require "p_gitsigns"
@@ -24,4 +25,4 @@ require "p_neoclip"
 require "lsp"
 require "p_cmp"
 
-vim.cmd("colorscheme darkplus")
+vim.cmd("colorscheme lunar") -- darkplus

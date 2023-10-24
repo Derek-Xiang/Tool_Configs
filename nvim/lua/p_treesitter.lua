@@ -16,6 +16,7 @@ configs.setup({
     "scss",
     "json",
     "terraform",
+    "hcl",
     "yaml",
     "bash",
     "cmake",

@@ -70,3 +70,19 @@ keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 keymap('n', '<leader>fd', ':Telescope neoclip<CR>', opts)
 keymap('n', '<leader>fr', ':lua require("neoclip").clear_history()<CR>', opts)
+
+-- Markdown Preview
+keymap("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", opts)
+-- keymap("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", opts)
+-- keymap("n", "<leader>mp", "<cmd>MarkdownPreviewStop<CR>", opts)
+
+
+-- Markdown Preview
+keymap("n", "<leader>cm", "<cmd>PasteImg<CR>", opts)
+
+vim.api.nvim_set_keymap('n', '<leader>xp', '', {
+  noremap = true,
+  callback = function()
+    require 'incolla'.incolla()
+  end,
+})
