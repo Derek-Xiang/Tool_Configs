@@ -56,20 +56,6 @@ keymap('x', 'J', ':move \'>+1<CR>gvgv\'', opts)
 
 ------------------ Plugin keymaps -----------------------
 
--- Comment
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current(nil, {cfg})<CR>", opts)
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
-
--- Nvim Tree
-keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
-
--- Telescope
-keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
-keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
-keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
-keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
-keymap('n', '<leader>fd', ':Telescope neoclip<CR>', opts)
-keymap('n', '<leader>fr', ':lua require("neoclip").clear_history()<CR>', opts)
 
 -- Markdown Preview
 keymap("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", opts)

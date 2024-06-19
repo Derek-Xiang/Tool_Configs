@@ -1,5 +1,6 @@
 vim.cmd("filetype plugin indent on")
 
+
 local opt = vim.opt
 
 opt.backup = false
@@ -26,10 +27,11 @@ opt.wrap = true -- Display lines as one long lin
 opt.termguicolors = true -- Display lines as one long lin
 opt.scrolloff = 8
 opt.mouse = "a"
-opt.tabstop = 2
+opt.tabstop = 4
 opt.autoread = true
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 opt.numberwidth = 4 -- Set number column width to 4 (default 4
 opt.pumheight = 10 -- Pop up heigh
 opt.guifont = "monospace:h17"
 opt.timeoutlen = 1000 -- Delay the timeout for key sequence
+
