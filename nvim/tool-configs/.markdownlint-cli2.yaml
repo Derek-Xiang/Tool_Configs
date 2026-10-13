@@ -1,0 +1,4 @@
+# Global markdownlint-cli2 config (passed via --config from nvim)
+config:
+  MD012: false # no-multiple-blanks
+  MD013: false # line-length
