@@ -1,0 +1,11 @@
+theme = tokyonight
+
+font-size = 14
+font-family = Hack Nerd Font
+
+background-opacity = 0.85
+background-blur = 20
+
+# cursor trail (https://github.com/sahaj-b/ghostty-cursor-shaders)
+custom-shader = /Users/derek/.config/ghostty/shaders/ghostty/cursor_warp.glsl
+custom-shader-animation = always

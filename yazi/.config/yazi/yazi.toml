@@ -1,0 +1,10 @@
+# yazi.toml
+[mgr]
+show_hidden = true
+sort_by = "btime"
+linemode = "size_and_mtime"
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+]
